@@ -1,5 +1,5 @@
 const { check, runTest } = require("../../test-api/index.js");
-
+const {addNumbers,multiplyNumbers,squareNumber,divideNumbers,isEven,getSquareRoot,removeDuplicateValues} = require("../separating-concerns/utils/mathFunctions.js")
 /*
 1. Create your own util function named removeDuplicateValues
 
@@ -14,6 +14,21 @@ It should then return a boolean depending on whether the total is even or not.
 
 function isArrayTotalEven(arr) {
   // remember to require in at least 3 util functions to help you solve this problem!
+
+  newarr = removeDuplicateValues(arr);
+
+  let sum = 0;
+
+  for(let i = 0; i < newarr.length; i++){
+    sum += newarr[i]
+  }
+
+  if(sum % 2 == 0){
+    return true
+  }else{
+  return false;
+  }
+
 }
 
 runTest("isArrayTotalEven() returns appropriate boolean for total", function () {

@@ -19,4 +19,10 @@ function getSquareRoot(num) {
   return Math.sqrt(num);
 }
 
-module.exports = {addNumbers,multiplyNumbers,squareNumber,divideNumbers,isEven,getSquareRoot}
+function removeDuplicateValues(num) {
+  var arr = new Set(num);
+  var newarr = Array.from(arr);
+  return newarr;
+}
+
+module.exports = {addNumbers,multiplyNumbers,squareNumber,divideNumbers,isEven,getSquareRoot,removeDuplicateValues}
