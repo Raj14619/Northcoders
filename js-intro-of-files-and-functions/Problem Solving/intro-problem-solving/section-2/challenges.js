@@ -2,7 +2,14 @@ const { check, runTest, skipTest } = require("../test-api/index.js");
 
 // QUESTION 1
 
-function checkSameFinalCharacter() {
+function checkSameFinalCharacter(value1,value2) {
+
+
+  if(value1.charAt(value1.length-1) === value2.charAt(value2.length-1)){
+    return true;
+  }
+  return false;
+
   // This function should take two strings as arguments and return true if their final character is the same or false if not
 }
 
@@ -20,11 +27,14 @@ runTest(
 
 // QUESTION 2
 
-function isAllUpperCase() {
+function isAllUpperCase(str) {
+
+  return str === str.toUpperCase();
+
   // This function should take a string as an argument and return true if every letter is upper case and false if at least one character is not
 }
 
-skipTest("isAllUpperCase() checks if every letter is upper case", function () {
+runTest("isAllUpperCase() checks if every letter is upper case", function () {
   check(isAllUpperCase("hello")).isEqualTo(false);
   check(isAllUpperCase("YEAH")).isEqualTo(true);
   check(isAllUpperCase("Well HELLO!")).isEqualTo(false);
@@ -35,9 +45,21 @@ skipTest("isAllUpperCase() checks if every letter is upper case", function () {
 
 function collectTheVowels(str) {
   // This function should take a string as its argument and return a string consisting of all vowels found in the input (retaining the order)
+
+  let vowels = "aeiou";
+  let output = "";
+
+  for(let i = 0; i < str.length; i++){
+    if(vowels.includes(str[i])){
+      output+=(str[i])
+    }
+  }
+
+  return output
+
 }
 
-skipTest(
+runTest(
   "collectTheVowels() takes a string of many letters and returns a string containing those vowels in correct order",
   function () {
     check(collectTheVowels("a")).isEqualTo("a");
