@@ -1,8 +1,12 @@
 const { check, runTest, skipTest } = require("../../test-api/index.js");
 
 function capitalArtists(arr) {
+
+  
   const artists = arr.map((pair) => {
-    return pair.split("-");
+    var remove_after = pair.indexOf("-");
+    var result = pair.substring(0,remove_after);
+    return result.toUpperCase().trim();
   });
 
   return artists;
