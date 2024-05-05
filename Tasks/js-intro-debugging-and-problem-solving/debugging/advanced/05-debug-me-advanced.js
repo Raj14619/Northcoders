@@ -30,6 +30,7 @@ function returnHighest(array, num) {
     return b.score - a.score;
   });
 
+
   let multipleOfNum = 1;
   for (let i = 1; i <= array.length; i++) {
     if (i % num === 0) {
@@ -39,6 +40,7 @@ function returnHighest(array, num) {
   const newArray = array.filter((object, index) => {
     return index < multipleOfNum;
   });
+  console.log(newArray)
   return newArray;
 }
 
