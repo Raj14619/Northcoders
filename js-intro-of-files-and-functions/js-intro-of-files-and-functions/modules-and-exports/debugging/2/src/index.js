@@ -1,4 +1,4 @@
 // run this file with node and debug the errors
-const patioBrickColourOptions = require('./data/data.js')
+const patioBrickColourOptions = require('../data/data')
 
 console.log(patioBrickColourOptions)
