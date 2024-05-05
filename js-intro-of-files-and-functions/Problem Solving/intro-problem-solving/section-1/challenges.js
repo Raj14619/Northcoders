@@ -2,7 +2,10 @@ const { check, runTest, skipTest } = require("../test-api/index.js");
 
 // QUESTION 1
 
-function connectStrings() {
+function connectStrings(str1, str2) {
+
+  return str1+" "+str2
+
   // This function should take 2 strings and join them together with a space in between
   // return this newly created string
 }
@@ -15,11 +18,20 @@ runTest("connectStrings() can join 2 strings together", function () {
 
 // QUESTION 2
 
-function checkWordEndsWithIng() {
+function checkWordEndsWithIng(str) {
+
+
+
+  if(str.charAt(str.length-1) === "g" && str.charAt(str.length-2) === "n" && str.charAt(str.length-3) === "i") {
+    return true
+  }else{
+  return false;
+  }
+
   // take a string as an argument and return a boolean based on whether the word given ends with 'ing'
 }
 
-skipTest(
+runTest(
   "checkWordEndsWithIng() can return true/false for a single word",
   function () {
     check(checkWordEndsWithIng("doing")).isEqualTo(true);
