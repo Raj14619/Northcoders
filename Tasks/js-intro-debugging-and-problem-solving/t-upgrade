@@ -1,0 +1,4 @@
+[0m[0;4mWHO[0m[0m[0;4m UID [0m[0m[0;4m USER[0m[0m[0;4m PID [0m[0m[0;4m COMM          [0m[0m[0;4m WHAT                                                    [0m[0m[0;4m WHY                      [0m[0m[0;4m MODE [0m
+raj 1000 raj  2369 gsd-media-keys handle-power-key:handle-suspend-key:handle-hibernate-key GNOME handling keypresses block
+
+1 inhibitors listed.
