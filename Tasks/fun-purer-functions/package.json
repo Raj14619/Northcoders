@@ -1,0 +1,15 @@
+{
+  "name": "fun-purer-functions",
+  "version": "1.0.0",
+  "description": "Instructions for this sprint can be found at:\r https://l2c.northcoders.com/courses/fun/purer-functions",
+  "main": "pure.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.7.0"
+  }
+}
